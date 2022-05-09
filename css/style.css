@@ -1,0 +1,135 @@
+.body {
+    margin: 0 auto;
+    font-family: "Trebuchet MS", "Helvetica", sans-serif;
+  }
+  
+  .textarea {
+    display: block;
+    width: 1100px;
+    height: 300px;
+    margin: 10px auto 10px;
+    padding: 10px;
+    font-size: 18px;
+    color: #000000;
+
+
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    resize: vertical;
+  }
+  
+  .caseDown, .caseUp, .shiftCaps, .caps {
+    display: block;
+    min-height: 40px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .description, .language, .title {
+    margin: 10px auto;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 30px;
+    color: #1c232e;
+  }
+  
+  .keyboard {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(185, 185, 185);
+    border-radius: 5px;
+    border: 2px solid var(--keys-color);
+    width: 1100px;
+    height: 364px;
+    padding: 10px;
+    gap: 10px;
+    margin: 0 auto;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 6px;
+  }
+  
+  .key {
+    width: 60px;
+    height: 60px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 3px;
+    background: #3a424e;
+    box-shadow: #6586b1 2px 2px 3px;
+    transition: 0.3s;
+    cursor: pointer;
+    user-select: none;
+  }
+  .key:hover {
+    background: #94a9c8;
+  }
+  .key.active {
+    background-color: #94a9c8;
+    box-shadow: unset;
+  }
+  
+  .AltLeft,
+  .AltRight,
+  .ArrowUp,
+  .ArrowLeft,
+  .ArrowDown,
+  .ArrowRight,
+  .Backspace,
+  .CapsLock,
+  .ControlLeft,
+  .ControlRight,
+  .Delete,
+  .Enter,
+  .ShiftLeft,
+  .ShiftRight,
+  .Tab,
+  .Lang {
+    font-weight: 600;
+    background-color: #1c232e;
+  }
+  
+  .Tab {
+    width: 100px;
+  }
+  
+  .Backspace{
+    width: 170px;
+  }
+  .CapsLock{
+    width: 110px;
+  }
+  .ShiftLeft {
+    width: 150px;
+  }
+  .Delete {
+    width: 60px;
+  }
+  .Enter{
+    width: 180px;
+  }
+  .ShiftRight{
+    width: 140px;
+  }
+  
+  .Space {
+    width: 460px;
+  }
+  .ControlLeft{
+    width: 80px;
+  }
+  .ControlRight {
+    width: 75px;
+  }
+  
