@@ -46,10 +46,7 @@ export default class Keyboard {
       rowKeys.forEach((key) => {
         const newKey = new Key(this.currentLang, key);
         this.keyboardKeysObj.push(newKey);
-        if (key === 'Win') {
-          newKey.small = this.currentLang;
-          newKey.shift = this.currentLang;
-        }
+       
         row.append(newKey.keyHTML);
       });
       keyboard.append(row);
@@ -90,7 +87,6 @@ export default class Keyboard {
       const langIndex = this.langList.indexOf(this.currentLang);
       this.currentLang = this.langList[(langIndex === this.langList.length - 1) ? 0 : langIndex + 1];
       localStorage.setItem('keyboardLang', this.currentLang);
-      this.keyboardKeysObj.find((el) => el.code === 'Win').keyHTML.textContent = this.currentLang;
       drawKeyboard();
     };
 
