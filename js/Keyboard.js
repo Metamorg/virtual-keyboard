@@ -9,7 +9,7 @@ export default class Keyboard {
       ['Tab', 'KeyQ', 'KeyW', 'KeyE', 'KeyR', 'KeyT', 'KeyY', 'KeyU', 'KeyI', 'KeyO', 'KeyP', 'BracketLeft', 'BracketRight', 'Backslash', 'Delete'],
       ['CapsLock', 'KeyA', 'KeyS', 'KeyD', 'KeyF', 'KeyG', 'KeyH', 'KeyJ', 'KeyK', 'KeyL', 'Semicolon', 'Quote', 'Enter'],
       ['ShiftLeft', 'KeyZ', 'KeyX', 'KeyC', 'KeyV', 'KeyB', 'KeyN', 'KeyM', 'Comma', 'Period', 'Slash', 'ArrowUp', 'ShiftRight'],
-      ['ControlLeft', 'Lang', 'AltLeft', 'Space', 'AltRight', 'ArrowLeft', 'ArrowDown', 'ArrowRight', 'ControlRight'],
+      ['ControlLeft', 'Win', 'AltLeft', 'Space', 'AltRight', 'ArrowLeft', 'ArrowDown', 'ArrowRight', 'ControlRight'],
     ];
     this.specChars = {
       Enter: '\n',
@@ -46,7 +46,7 @@ export default class Keyboard {
       rowKeys.forEach((key) => {
         const newKey = new Key(this.currentLang, key);
         this.keyboardKeysObj.push(newKey);
-        if (key === 'Lang') {
+        if (key === 'Win') {
           newKey.small = this.currentLang;
           newKey.shift = this.currentLang;
         }
@@ -90,7 +90,7 @@ export default class Keyboard {
       const langIndex = this.langList.indexOf(this.currentLang);
       this.currentLang = this.langList[(langIndex === this.langList.length - 1) ? 0 : langIndex + 1];
       localStorage.setItem('keyboardLang', this.currentLang);
-      this.keyboardKeysObj.find((el) => el.code === 'Lang').keyHTML.textContent = this.currentLang;
+      this.keyboardKeysObj.find((el) => el.code === 'Win').keyHTML.textContent = this.currentLang;
       drawKeyboard();
     };
 
@@ -162,9 +162,10 @@ export default class Keyboard {
       } else if (['ControlLeft', 'AltLeft'].includes(keyCode)) {
         this[`is${keyCode}Pressed`] = true;
         if (this.isControlLeftPressed && this.isAltLeftPressed) switchLang();
-      } else if (keyCode === 'Lang') {
-        switchLang();
-      }
+       } 
+       //else if (keyCode === 'Win') {
+      //   switchLang();
+      // }
     } else if (['mouseup', 'mouseleave', 'keyup'].includes(e.type)) {
       deactivateKey();
     }
