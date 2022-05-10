@@ -1,6 +1,6 @@
 .body {
     margin: 0 auto;
-    font-family: "Trebuchet MS", "Helvetica", sans-serif;
+    font-family: monospace;
   }
   
   .textarea {
@@ -11,8 +11,6 @@
     padding: 10px;
     font-size: 18px;
     color: #000000;
-
-
     font-size: 20px;
     padding: 10px;
     border-radius: 10px;
@@ -61,8 +59,7 @@
   .key {
     width: 60px;
     height: 60px;
-    font-weight: 500;
-    line-height: 40px;
+    line-height: 55px;
     text-align: center;
     color: #ffffff;
     border-radius: 3px;
@@ -95,7 +92,7 @@
   .ShiftLeft,
   .ShiftRight,
   .Tab,
-  .Lang {
+  .Win {
     font-weight: 600;
     background-color: rgb(20, 20, 20);
   }
